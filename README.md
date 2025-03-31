@@ -10,9 +10,11 @@ Kiến trúc **Clean Architecture** được áp dụng với 3 lớp: **Present
 - **Domain**: Xử lý logic business.
 - **Data**: Xử lý Data.
 
-### Tạo hai màn hình chính:
+### Các màn hình chính:
 - **Màn hình home (Home)**: Hiển thị danh sách User.
-- **Màn hình add tiết (AddScreen)**: Hiển thị thông tin chi tiết của mỗi mục và cho phép xóa mục.
+- **Màn hình add (AddScreen)**: Thêm user.
+- **Màn hình edit (EditScreen)**: Cập nhập user.
+- **Màn hình detail (DetailScreen)**: Hiển thị chi tiết thông tin User.
 
 ### Cấu trúc thư mục
 ```
