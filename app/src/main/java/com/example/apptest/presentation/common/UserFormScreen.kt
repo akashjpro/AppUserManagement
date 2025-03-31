@@ -48,12 +48,14 @@ fun UserFormScreen(
     user: User? = null,
     onSubmit: (User) -> Unit
 ) {
+    val birthdayIni = (user?.birthday)?.times(1000)
+
     var firstName by remember { mutableStateOf(user?.firstName ?: "") }
     var lastName by remember { mutableStateOf(user?.lastName ?: "") }
     var age by remember { mutableStateOf(user?.age?.toString() ?: "") }
     var address by remember { mutableStateOf(user?.address ?: "") }
     var selectedGender by remember { mutableStateOf(if (user?.male == true) "Male" else "Female") }
-    var selectedDate by remember { mutableStateOf(user?.birthday) }
+    var selectedDate by remember { mutableStateOf(birthdayIni)}
 
     var firstNameError by remember { mutableStateOf(false) }
     var lastNameError by remember { mutableStateOf(false) }
@@ -61,6 +63,8 @@ fun UserFormScreen(
     var addressError by remember { mutableStateOf(false) }
     var dateError by remember { mutableStateOf(false) }
     var genderError by remember { mutableStateOf(false) }
+
+
 
     Column(
         modifier = Modifier
@@ -182,7 +186,7 @@ fun DatePickerFieldToModal(
     var showModal by remember { mutableStateOf(false) }
 
     OutlinedTextField(
-        value = selectedDate?.let {convertTimestampToDate(it) } ?: "",
+        value = selectedDate?.let {convertMillisToDate(it) } ?: "",
         onValueChange = { },
         label = { Text("DOB") },
         placeholder = { Text("MM/DD/YYYY") },
