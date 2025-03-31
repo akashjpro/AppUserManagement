@@ -15,7 +15,7 @@ Kiến trúc **Clean Architecture** được áp dụng với 3 lớp: **Present
 - **Màn hình add tiết (AddScreen)**: Hiển thị thông tin chi tiết của mỗi mục và cho phép xóa mục.
 
 ### Cấu trúc thư mục
-
+```
 AppUserManagement
 │── app
 │   ├── src/main/java/com/example/apptest
@@ -29,6 +29,7 @@ AppUserManagement
 │
 ├── build.gradle        # Cấu hình build
 └── settings.gradle     # Cấu hình dự án
+```
 
 ### Link demo app: https://drive.google.com/file/d/1qzdYnlYkKUoaWBdAUZkOPa7FVy0S9zr0/view?usp=sharing
 
